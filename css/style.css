@@ -1,0 +1,1505 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;;
+}
+
+
+/* ===== Colours ===== */
+:root{
+    --body-color: #fff;
+    --nav-color: #071a4fee;
+    --side-nav: #051132;
+    --text-color: #FFF;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+    background-color: var(--body-color);
+}
+
+body.dark{
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    --search-bar: #242526;
+}
+
+h1{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  color: #010718;
+  padding: 15px 0px; 
+  text-shadow: 2px 2px 2px grey;
+}
+
+/*---------------------------------
+  || NAVBAR  SECTION STARTS HERE ||
+  ---------------------------------*/
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--side-nav);
+    z-index: 100;
+    overflow: visible;
+}
+.upperNav{
+  background-color: #505457;
+  border-bottom: 1px solid #505457;
+  color: white;
+  text-align: right;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.upperNav p{
+  color: white;
+  padding: 5px 0px;
+  margin: 0px 15px;
+  font-size: 16px;
+}
+.upperNav a{
+  color: wheat;
+  padding: 0px 5px;
+  font-size: 15px;
+}
+.upperNav p:hover{
+  transform: scale(1.1);
+}
+.upperNav button.callBack{
+  border-radius: 5px;
+  padding: 5px 8px;
+  margin: 5px 15px;
+  color: grey;
+  outline: none;
+  border: none;
+  background-color: #ffffff;
+}
+.upperNav button.callBack:hover{
+  transform: scale(1.1);
+}
+.upperNav button.callBack a{
+  color: #0d2b7c;
+  font-weight: 600;
+}
+.callBackContainer{
+  width: 40%;
+  margin: 10% auto;
+  margin-bottom: 3%;
+  display: block;
+  box-shadow: 2px 2px 6px black;
+  text-align: center;
+}
+.callbackDetails{
+  margin: 10px 25px;
+  padding: 25px 50px;
+}
+.callbackDetails input[type="text"]{
+  width: 85%;
+  margin: 10px 0px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid grey;
+  font-size: 16px;
+  font-weight: 600;
+}
+.callbackDetails input[type="submit"]{
+  margin: 25px auto;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight:500;
+  cursor: pointer;
+  color: white;
+  background-color: #0a438d;
+  border: none;
+  border-radius: 5px;
+}
+.callbackDetails input[type="submit"]:hover{
+  transform: scale(1.2);
+}
+body.dark nav{
+    border: 1px solid #393838;
+
+}
+
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: var(--side-nav);
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-bar .sidebarOpen{
+    color: var(--text-color);
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .nav-bar .logo a img{
+    width: 175px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.menu .logo-toggle{
+    display: none;
+}
+
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-links li{
+    margin: 0 10px;
+    list-style: none;
+    position: relative;
+    padding: 0px 25px;
+    /* border: 1px solid red; */
+}
+.nav-links li ul{
+  width: 175%;
+  display: none;
+  position: absolute;
+  margin-top: 10%;
+  margin-left: -60%;
+  background: #051132;
+  padding: 10px 5px;
+  text-align: center;
+}
+.nav-links li:hover > ul{
+  display: block;
+  overflow: visible;
+}
+.nav-bar .nav-links li ul li{
+  list-style: none;
+  position: relative;
+  padding: 8px  0px;
+  margin: 10px 0px;
+}
+
+.nav-links li a{
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 0px;
+}
+
+
+.nav-links li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 2.5px;
+    width: 85%;
+    border-radius: 8px;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.nav-links li ul li a{
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px 0px;
+}
+.nav-links li ul li a::before{
+  display: none;
+}
+.nav-links li ul li:hover, .nav-links li:hover{
+  transform: scale(1.1);
+}
+.nav-links li:hover a::before{
+    opacity: 1;
+}
+
+
+.nav-bar .darkLight-searchBox{
+    display: flex;
+    align-items: center;
+}
+
+.darkLight-searchBox .dark-light{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.dark-light i{
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+/*---------------------------------
+  || NAVBAR  SECTION ENDS HERE ||
+  ---------------------------------*/
+
+
+
+
+/*--------------------------------------------
+  || RESPONSIVE NAVBAR  SECTION STARTS HERE ||
+  --------------------------------------------*/
+
+@media (max-width: 790px) {
+    nav .nav-bar .sidebarOpen{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        left: -100%;
+        top: 0;
+        padding: 20px;
+        background-color: var(--side-nav);
+        z-index: 100;
+        transition: all 0.4s ease;
+    }
+
+    nav.active .menu{
+        left: -0%;
+    }
+
+    nav.active .nav-bar .navLogo a{
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .menu .logo-toggle{
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo-toggle .siderbarClose{
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-bar .nav-links{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .nav-links li a{
+        display: block;
+        margin-top: 20px;
+    }
+}
+/*--------------------------------------------
+  || RESPONSIVE NAVBAR  SECTION ENDS HERE ||
+  --------------------------------------------*/
+/*-------------------------------
+  || CONTACT SECTION STARTS HERE ||
+  -------------------------------*/
+.contactContainer{
+  width: 72%;
+  margin: 8.7% auto;
+  margin-bottom: 5%;
+  padding: 15px 25px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  text-align: center;
+}
+.contactFields{
+  width: 95%;
+  margin: 3% auto;
+  padding: 0px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contactContainer .contactFields form{
+  width: 48%;
+  padding: 15px 25px;
+  box-shadow: 2px 2px 6px black;
+  background-color:  #e4e4e459;
+  border-radius: 5px;
+}
+.contactContainer .contactFields .contactDetails{
+  margin: 25px;
+  padding:20px;
+}
+
+.contactContainer .contactFields form input[type="text"]{
+  width: 100%;
+  margin: 10px 0px;
+  padding: 5px ;
+  border-radius: 3px;
+  outline: none;
+  border: 1.2px solid grey;
+  font-size: 15px;
+  font-weight: 600;
+}
+.contactContainer .contactFields form textarea{
+  width: 100%;
+  height: 150px;
+  border: 1px solid grey;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 3px;
+  outline: none;
+  padding: 5px 10px;
+}
+.contactContainer .contactFields form input[type="submit"]{
+  padding: 5px 18px;
+  color: white;
+  background-color: #0a438d;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.contactContainer .contactFields form input[type="submit"]:hover{
+  transform: scale(1.1);
+}
+.contactContainer .contactFields .companyDetails{
+  width: 48%;
+  padding: 15px 25px;
+
+}
+.email, .address, .contactNumber{
+  border: 1px solid grey;
+  margin: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px black;
+  padding: 25px 15px;
+}
+.address i, .email i, .contactNumber i{
+  font-size: 32px;
+}
+.address h1, .email h1, .contactNumber h1{
+  font-size: 25px;
+  padding: 5px 0px;
+}
+.address p, .email p, .contactNumber p{
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/*-------------------------------
+  || CONTACT SECTION ENDS HERE ||
+  -------------------------------*/
+
+
+
+/*-------------------------------
+  || HOME  SECTION STARTS HERE ||
+  -------------------------------*/
+#home{
+  width: 100%;
+  height: 100vh;
+  padding: 50px 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('../images/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #0b2260;
+}
+
+#home .heading h1{
+  font-size: 80px;
+  line-height: 70px;
+  color: #0a438d;
+  text-align: left;
+  padding: 0px 0px;
+  text-transform: capitalize;
+  text-shadow: 5px 4px 3px grey;
+}
+#home .heading p{
+  font-size: 23px;
+  line-height: 25px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+#home .heading a button{
+  position: relative;
+  display: inline-block;
+  margin-left: 50px;
+  padding: 5px 20px;
+  background-color: transparent;
+  color: #fff;
+  background-color: #0E55B3;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 3px;
+}
+.getUpdates form .thirdRow button:hover, #home .heading a button:hover{
+  transform: scale(1.1);
+}
+
+.getUpdates{
+  width: 48%;
+  margin-top: 5%;
+}
+.getUpdates form{
+  margin: 5px 0px;
+  padding: 15px 15px;
+  border-radius: 8px;
+  height: 100%;
+  box-shadow: 2px 2px 6px black;
+  background-color: rgba(255, 254, 254, 0.744);
+}
+.getUpdates .updatesContainer{
+  padding: 0px 15px;
+}
+.getUpdates form .firstRow, .getUpdates .secondRow, .getUpdates .thirdRow{
+  display: flex;
+}
+.getUpdates form input[type="text"]{
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid rgba(128, 128, 128, 0.752);
+  padding: 5px 8px;
+  border-radius: 3px;
+  margin: 5px 8px;
+  display: flex;
+  font-weight: 600;
+}
+.getUpdates form .updatesContainer p{
+  font-weight: 600;
+}
+.getUpdates form input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+  margin: 2.5px 5px;
+}
+.getUpdates form .thirdRow{
+  margin: 5px 0px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.getUpdates form .thirdRow select{
+  outline: none;
+  border: none;
+  /* border-bottom: 3px solid grey; */
+  font-weight: 600;
+  background-color: #051132;
+  color: white;
+  padding: 8px ;
+  border-radius: 3px;
+  font-size: 15px;
+}
+.getUpdates form .thirdRow select::-webkit-scrollbar{
+  display: none;
+}
+
+.getUpdates form .thirdRow button{
+  padding: 5px 18px;
+  margin-right: 25px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #0a2469;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.reaches{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+}
+.reaches h2{
+  font-size: 20px;
+}
+.reaches p{
+  font-size: 15px;
+  font-weight: 600;
+}
+/*-----------------------------
+  || HOME  SECTION ENDS HERE ||
+  -----------------------------*/
+
+/*-----------------------------
+  || REACH  SECTION STARTS HERE ||
+  -----------------------------*/
+  .contentBox{
+    width: 90%;
+    padding: 50px 100px;
+    /* background: url('../images/background-1.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #0a1b49;
+    /* border-radius: 25px; */
+    margin: 50px auto;
+    background-color: rgb(228, 225, 225);
+  }
+  .contentBox h1, .contentBox p{
+    color: #010718;
+    text-shadow: 2px 2px 2px grey;
+    padding: 0px 0px;
+  }
+
+
+/*-----------------------------
+  || REACH SECTION ENDS HERE ||
+  -----------------------------*/
+
+
+
+/*-----------------------------------
+  || PRODUCTS  SECTION STARTS HERE ||
+  -----------------------------------*/
+#popularProducts{
+  width: 90%;
+  margin: 150px auto;
+  border: 1px solid black;
+  }
+.contentContainer{
+  width: 100%;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.popularProductContentBox{
+  width: 280px;
+  height: 150px;
+  border: 1px solid white;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 25px;
+  color: #0E55B3;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.358);
+  backdrop-filter: blur(15px);
+}
+.popularProductContentBox p{
+  font-size: 16px;
+}
+.popularProductContentBox .icon{
+  width: 35px;
+  height: 35px;
+  border: 1px solid grey;
+  border-radius: 50%;
+}
+.popularProductContentBox .icon p{
+  font-size: 15px;
+  text-align: center;
+  margin: 5px auto;
+}
+.popularProductContentBox img{
+  width: 50px;
+  margin-left: -8px;
+  margin-top: -2.5px;
+}
+/*---------------------------------
+  || PRODUCTS  SECTION ENDS HERE ||
+  ---------------------------------*/
+/*------------------------------------------
+  || ASSOCIATE BRANDS SECTION STARTS HERE ||
+  ------------------------------------------*/
+#associateBrands{
+  width: 90%;
+  background-color: rgb(231, 230, 227);
+  margin: 150px auto;
+
+}
+#associateBrands .logos{
+  width: 100%;
+  padding: 5px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px solid #010718;
+  margin-bottom: 150px;
+}
+#associateBrands .logos img{
+  width: 120px;
+}
+/*------------------------------------------
+  || ASSOCIATE BRANDS SECTION ENDS HERE ||
+  ------------------------------------------*/
+
+
+/*-----------------------------------------------
+  || PRODUCTS FOR EVERYONE SECTION STARTS HERE ||
+  -----------------------------------------------*/
+
+#productsForEveryone{
+  width: 90%;
+  border: 1px solid green;
+  margin: 150px auto;
+}
+
+.productsForEveryoneHeading{
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0a1b49;
+  border-radius: 25px;
+  margin: 10px auto;
+}
+.productsForEveryoneHeading p{
+  padding: 10px 100px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.prodcuctsVariety{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+}
+.productsVarietyContainer{
+  width: 250px;
+  height: 300px;
+  border: 1px solid white;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.358);
+  color: #0E55B3;
+  margin: 50px 0px;
+
+}
+.productsVarietyContainer h2{
+  font-size: 23px;
+  margin-top: 25px;
+}
+.productsVarietyContainer img{
+  width: 100%;
+  height: 130px;
+  margin: 0 auto;
+}
+.productsVarietyContainer a img{
+  width: 35px;
+  height: 35px;
+  filter: invert(1);
+  float: right ;
+  align-items: flex-end;
+  margin-top: 25px;
+}
+/*---------------------------------------------
+  || PRODUCTS FOR EVERYONE SECTION ENDS HERE ||
+  ---------------------------------------------*/
+
+/*-----------------------------------------
+  || PRODUCTS DESIGN SECTION STARTS HERE ||
+  -----------------------------------------*/
+  #productDesign{
+    width: 90%;
+    margin: 150px auto;
+    border: 1px solid navy;
+  }
+  
+  .productDesignHeadings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0px;
+    padding: 25px 100px;
+    
+  }
+  .productDesignHeadings img{
+    width: 40%;
+  }
+  .taxSaving{
+    width: 400px;
+    margin: 15px 0px;
+    color: #0E55B3;
+    font-size: 15px;
+    padding: 15px;
+  }
+  .productDesignIcons img{
+    width: 8%;
+  }
+/*-----------------------------------------
+  || PRODUCTS DESIGN SECTION ENDS HERE ||
+  -----------------------------------------*/
+
+/*-----------------------------------
+  || SERVICES  SECTION STARTS HERE ||
+  -----------------------------------*/
+  #services{
+    width: 90%;
+    text-align: center;
+    color: #0E55B3;
+    font-size: 16px;
+    margin: 150px auto;
+    border: 1px solid red;
+  }
+  .serviceHeadings p{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 25px 0px;
+    padding: 50px 0px;
+    padding-top: 25px;
+  }
+  .servicesBoxContainer{
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .serviceBox{
+    width: 35%;
+    margin: 0px 25px;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 15px 30px;
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.358);
+
+  }
+  .serviceBox img{
+    width: 35px;
+    height: 35px;
+  }
+  .serviceBox .allServices{
+    margin: 25px 0px;
+  }
+  .serviceBox .allServices a{
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: #4070F4;
+    color: white;
+  }
+/*---------------------------------
+  || SERVICES  SECTION ENDS HERE ||
+  ---------------------------------*/
+
+  
+/*------------------------------
+  || SECURITY SECTION STARTS HERE ||
+  ------------------------------*/
+#security{
+  width: 90%;
+  margin: 150px auto;
+  border: 1px solid blue;
+}
+.securityHeadings{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 100px;
+}
+.securityHeadings .securityLeftArea, .securityHeadings .securityRightArea{
+  width: 50%;
+  margin: 0px 25px;
+}
+.securityLeftArea p{
+  padding: 15px;
+  color: #0E55B3;
+  font-size: 18px;
+  font-weight: 600;
+}
+.securityRightArea img{
+  padding: 50px;
+  width: 100%;
+}
+.securityLowerPart{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0px 100px;
+}
+.icons{
+  text-align: center;
+}
+
+/*---------------------------------
+  || SECURITY  SECTION ENDS HERE ||
+  ---------------------------------*/
+
+/*----------------------------------
+  || FEEDBACK SECTION STARTS HERE ||
+  ----------------------------------*/
+#feedback{
+  width: 90%;
+  color: #0E55B3;
+  margin: 150px auto;
+  border: 1px solid yellow;
+}
+#feedback p{
+  padding: 25px 100px;
+  font-size: 20px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.feedBackContainer{
+  padding: 50px 100px;
+  display: flex;
+  align-items: center;
+}
+.feedBackContainer .leftShift img{
+  transform: rotate(180deg);
+  filter: invert();
+
+}
+.rightShift img{
+  filter: invert();
+}
+.profileHolder{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profileCard{
+  border: 1px solid white;
+  margin: 0px 15px;
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.358);
+  border-radius: 8px;
+  padding: 15px;
+}
+#feedback .profileCard p{
+  font-size: 15px;
+  text-align: left;
+  padding: 0px 0px;
+
+}
+#feedback .profileCard .profileInfo .pic{
+  text-align: center;
+}
+#feedback .profileCard img{
+  margin-top: 25px;
+}
+#feedback .profileCard h2{
+  font-size: 18px;
+  margin-top: -25px;
+}
+/*--------------------------------
+  || FEEDBACK SECTION ENDS HERE ||
+  --------------------------------*/
+
+/*------------------------------
+  || F&Q  SECTION STARTS HERE ||
+  ------------------------------*/
+.fq{
+  width: 90%;
+  margin: 150px auto;
+  border: 1px solid red;
+
+}
+.fq h1{
+  width: 100%;
+  margin: 10px auto;
+}
+.questions{
+  padding: 50px 100px;
+}
+.questions .questionBox{
+  margin: 15px 0px;
+  color: #0E55B3;
+  font-size: 15px;
+}
+.questions label{
+  font-size: 18px;
+  font-weight: 600;
+}
+.query{
+  color: #0E55B3;
+}
+.query .mail, .query .call{
+  padding:  0px 15px ;
+  font-weight: 600;
+}
+.call {
+  margin-top: 5px;
+}
+.query .mail a, .query .call a{
+  font-weight: 500;
+}
+/*----------------------------
+  || F&Q  SECTION ENDS HERE ||
+  ----------------------------*/
+
+
+
+
+/*---------------------------------
+  || FOOTER  SECTION STARTS HERE ||
+  ---------------------------------*/
+footer{
+  width: 100%;
+  padding: 25px 50px;
+  background: var(--side-nav);
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  margin-top: 50px;
+  text-align: center;
+}
+footer .footer .links{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px solid rgba(192, 192, 192, 0.222);
+}
+footer .footer .links .leftFooter img{
+  width: 50%;
+  margin-left: -50%;
+}
+
+
+footer .footer .links .leftFooter .socialLinks ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 50px;
+  width: 40%;
+  margin: 25px 0px;
+}
+footer .footer .links .leftFooter .socialLinks ul li a{
+  font-size: 28px;
+  color: rgb(136, 118, 118);
+}
+footer .footer .links .leftFooter .socialLinks ul li a:hover{
+  color: white;
+}
+footer .footer .links .rightFooter{
+  display: flex;
+  justify-content: space-between;
+  align-items:baseline;
+  color: var(--text-color);
+}
+.usefulLinks, .community, .partners{
+  font-weight: 600;
+  font-size:20px ;
+}
+footer .footer .links .rightFooter .usefulLinks, footer .footer .links .rightFooter .community, footer .footer .links .rightFooter .partners{
+  padding: 0px 15px;
+  color: white;
+  text-transform: uppercase;
+}
+footer .footer .links .rightFooter .usefulLinks a, footer .footer .links .rightFooter .community a, footer .footer .links .rightFooter .partners a{
+  color: grey;
+  font-size: 15px;
+}
+footer .footer .links .rightFooter .usefulLinks a:hover, footer .footer .links .rightFooter .community a:hover, footer .footer .links .rightFooter .partners a:hover{
+  color: white;
+}
+footer .footer .copyright{
+  width: 100%;
+  margin: 0 auto;
+  font-size: 15px;
+  padding: 15px 0px;
+  border-top: 1px solid rgba(192, 192, 192, 0.222);
+}
+
+.copyright .logo, .copyright .text{
+  font-size: 18px;
+}
+
+/*---------------------------------
+  || FOOTER  SECTION ENDS HERE ||
+  ---------------------------------*/
+
+
+
+/*--------------------------------
+  || LINKS PAGE CSS STARTS HERE ||
+  -------------------------------- */
+  .infoContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 80px 0px;
+    padding: 30px 100px;
+
+  }
+  .infoContainer h1, .serviceContainer h1, .ProductContainer h1{
+    font-size: 25px;
+  }
+  .infoContainer h2{
+    font-size: 20px;
+    text-align: center;
+  }
+  .infoContainer p{
+    text-align: left;
+    color: #0E55B3;
+    font-size: 15px;
+    margin: 15px 0px;
+    font-weight: 600;
+  }
+  .services, .products{
+    margin: 80px 0px;
+  }
+  .serviceContainer,   .ProductContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 25px 100px;
+  }
+
+  .box{
+    width: 18%;
+    height: 25%;
+    border: 1px solid silver;
+    border-radius: 8px;
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.358);
+    padding: 5px;
+  }
+
+
+/*--------------------------------
+  || LINKS PAGE CSS ENDS HERE ||
+  -------------------------------- */
+
+/*-----------------------------------
+  || ABOUT US PAGE CSS STARTS HERE ||
+  ----------------------------------- */
+.aboutContainer, .glossaryContainer, .careerContainer, .termsPoliciesContainer, .trustSafetyContainer{
+  border: 1px solid silver;
+  width: 75%;
+  margin: 10% auto;
+  padding: 15px 50px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  list-style: lower-greek;
+}
+.about{
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+.about h1, .glossaryContainer h1, .careerContainer h1, .termsPoliciesContainer h1{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.teamIntro h2{
+  text-align: center;
+  margin: 15px 0px;
+  font-size: 25px;
+}
+.about p, .intro p{
+  font-size: 18px;
+  font-weight: 600;
+  color: #0E55B3;
+}
+.intro label{
+  font-size: 20px;
+  font-weight: 700;
+  margin: 25px 0px;
+
+}
+
+ol li{
+  padding: 0px 100px;
+  text-align: left;
+  font-weight: 600;
+  color: #4070F4;
+}
+/*---------------------------------
+  || ABOUT US PAGE CSS ENDS HERE ||
+  --------------------------------- */
+/*---------------------------------
+  || CAREER PAGE CSS STARTS HERE ||
+  --------------------------------- */
+.intrapreneur, .longTermClarity{
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0px;
+}
+
+.clarity, .longTerm{
+  margin: 15px;
+  width: 45%;
+}
+.careerContainer h2{
+  font-size: 28px;
+  /* margin: 25px 0px; */
+  color: #4070F4;
+  text-align: center;
+}
+.values{
+  margin: 25px 0px;
+  padding: 25px;
+}
+.valuesContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.valuesContainer img, .intrapreneur img {
+  width: 375px;
+  height: 225px;
+}
+.valuesContent, .intrapreneurContent{
+  width: 45%;
+}
+
+/*-------------------------------
+  || CAREER PAGE CSS ENDS HERE ||
+  ------------------------------- */
+/*-----------------------------------
+  || GLOSSARY PAGE CSS STARTS HERE ||
+  ----------------------------------- */
+.economy,.taxation, .business, .financeAccounting, .trading{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0px;
+  padding: 5px 0px;
+}
+.economyContent, .taxationContent, .businessContent, .financeAccountingContent, .tradingContent{
+  width: 48%;
+}
+.economy h1, .taxation h1, .business h1, .financeAccounting h1, .trading h1{
+  font-size: 25px;
+}
+.economy p, .taxation p, .business p, .financeAccounting p, .trading p{
+  width: 100%;
+}
+.economy img, .taxation img, .business img, .financeAccounting img, .trading img{
+  width: 48%;
+}
+
+/*---------------------------------
+  || GLOSSARY PAGE CSS ENDS HERE ||
+  --------------------------------- */
+
+
+/*------------------------------------
+  || TERMS AND POLICIES STARTS HERE ||
+  ------------------------------------ */
+
+/*-----------------------------------
+  || TERMS AND CONDITION ENDS HERE ||
+  -----------------------------------*/
+
+
+
+/*--------------------------------
+  || TRUST AND SAFETY ENDS HERE ||
+  -------------------------------- */
+.safetyContent{
+  text-align: center;
+}
+.trustSafetyContainer p{
+  font-size: 20px;
+  color: #0E55B3;
+  text-align: center;
+}
+.safetyContent p{
+  font-size: 16px;
+}
+.safeGuard, .safeGuardFeatures{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px auto;
+}
+.securityFeatureBoxes{
+  margin: 25px;
+}
+.safeGuard img{
+  width: 100%;
+  padding: 0px 15px;
+}
+/*--------------------------------
+  || TRUST AND SAFETY ENDS HERE ||
+  -------------------------------- */
+
+
+/*========================
+  DESKTOP DESIGN ENDS HERE
+  ========================  */
+
+
+/*=============================
+  RESPONSIVE DESIGN STARTS HERE
+  =============================  */
+
+@media (max-width: 1024px) {
+  #home .heading h1{
+    font-size: 55px;
+    line-height: 48px;
+  }
+  #home .heading p{
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .prodcuctsVariety{
+    padding: 20px 50px;
+  }
+  .productsVarietyContainer{
+    width: 220px;
+    height: 260px;
+    padding: 15px;
+    margin: 25px 0px;
+  }
+  .productsVarietyContainer h2{
+    font-size: 23px;
+    margin-top: 25px;
+  }
+  .productsVarietyContainer img{
+    width: 100%;
+    height: 130px;
+    margin: 0 auto;
+  }
+  .productsVarietyContainer a img{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #popularProducts h1, #associateBrands h1, .productsForEveryoneHeading h1, #productDesign h1, .serviceHeadings h1, #security h1, #feedback h1, .fq h1{
+    font-size: 25px;
+    padding: 0px 15px;
+  }
+  h2{
+    font-size: 22px;
+  }
+  #home{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 35% auto;
+    padding: 15px;
+  }
+  #home .heading{
+    width: 100%;
+    text-align: center;
+
+  }
+  #home .heading h1{
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 10px 15px;
+  }
+  #home .heading a button{
+    margin-left: 0px;
+  }
+  #home .card{
+    width: 310px;
+    margin: 30px auto;
+    margin-bottom: 80px;
+  }
+  .contentBox {
+    padding: 25px 15px;
+  }
+  .contentBox h1{
+    font-size: 20px;
+  }
+  .contentBox p{
+    font-size: 12px;
+  }
+  .contentContainer{
+    padding: 25px 15px;
+  }
+  .popularProductContentBox{
+    width: 100%;
+  }
+  #associateBrands .logos{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px 15px;
+  }
+  .productsForEveryoneHeading p{
+    padding: 10px 15px;
+  }
+  .prodcuctsVariety{
+    display: block;
+    padding: 15px 25px;
+  }
+  .productsVarietyContainer{
+    margin: 25px auto;
+    width: 75%;
+  }
+  .productDesignHeadings {
+    display: block;
+    margin: 25px 0px;
+    padding: 25px;
+  }
+  .productDesignHeadings img {
+    width: 100%;
+  }
+  .taxSaving {
+    text-align: center;
+    width: 100%;
+    margin: 15px auto;
+    font-size: 15px;
+    padding: 15px;
+  }
+  .productDesignIcons img {
+    width: 22%;
+    margin: 0 auto;
+  }
+
+  .serviceHeadings p {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 5px 0px;
+    padding: 15px 25px;
+    padding-top: 15px;
+  }
+  .servicesBoxContainer {
+    padding: 10px 25px;
+    display: block;
+  } 
+  .serviceBox {
+    width: 80%;
+    margin: 25px auto;
+    padding: 15px 30px;
+  }
+  .securityHeadings {
+    display: block;
+    padding: 0px 25px;
+  }
+  .securityHeadings .securityLeftArea, .securityHeadings .securityRightArea {
+    width: 100%;
+    margin: 25px auto;
+  }
+  .securityLeftArea p{
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .securityLowerPart {
+    display: block;
+    padding: 0px 15px;
+  }
+  .feedBackContainer{
+    padding: 10px 15px;
+  }
+  .profileHolder {
+    width: 100%;
+    padding: 10px 25px;
+    display: block;
+    /* margin: 25px; */
+  }
+  .profileCard {
+    width: 100%;
+    border: 1px solid white;
+    margin: 25px auto;
+    padding: 15px;
+  }
+  .feedBackContainer .leftShift img {
+    display: none;
+  }
+  .feedBackContainer .rightShift img {
+    display: none;
+  }
+  .questions{
+    padding: 10px 15px;
+  }
+  footer{
+    padding: 15px 10px;
+  }
+  footer .footer .links {
+    display: block;
+  }
+  footer .footer .links .leftFooter img {
+    width: 60%;
+    margin-left: 0px;
+  }
+  footer .footer .links .leftFooter p {
+    font-size: 15px;
+    text-align: center;
+  }
+  footer .footer .links .leftFooter .socialLinks ul {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: 25px auto;
+  }
+  footer .footer .links .leftFooter .socialLinks ul li a{
+    font-size: 18px;
+  }
+  .usefulLinks, .community, .partners{
+    font-weight: 600;
+    font-size:15px ;
+  }
+  footer .footer .links .rightFooter .usefulLinks a, footer .footer .links .rightFooter .community a, footer .footer .links .rightFooter .partners a{
+    color: var(--text-color);
+    font-size: 12px;
+  }
+  #feedback p {
+    font-size: 15px;
+    padding: 10px 25px;
+  }
+
+  .infoContainer{
+    width: 100%;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+  }
+  .box{
+    width: 100%;
+    margin: 15px;
+  }
+  .ProductContainer{
+    display: block;
+  }
+}
