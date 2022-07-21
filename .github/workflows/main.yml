@@ -15,5 +15,5 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: 185.27.134.11
-        username: epiz_31860883
+        username: epiz_32210606
         password: ${{ secrets.ftp_password }}
