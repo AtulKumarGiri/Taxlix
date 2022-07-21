@@ -20,7 +20,7 @@
   <nav>
     <div class="upperNav">
     <p class="call">Call : <a href="tel:9088668829"> +91 90886 68829</a></p>
-    <p class="mail">email : <a href="mailto:figgitech@gmail.com">support@taxlix.com</a></p>
+    <p class="mail">email : <a href="mailto:support@taxlix.com">support@taxlix.com</a></p>
     <button class="callBack"><a href="callback.php">Request a Callback</a></button>
     </div>
     <div class="nav-bar">
