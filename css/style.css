@@ -1248,6 +1248,27 @@ ol li{
   =============================  */
 
 @media (max-width: 1024px) {
+  nav .nav-bar {
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+  nav .nav-bar .logo a img {
+    width: 125px;
+  }
+  .nav-bar .nav-links li {
+    margin: 0px 0px;
+    padding: 0px 15px;
+  }
+  .nav-links li a {
+    font-size: 13px;
+    padding: 10px 0px;
+  }
+  .nav-links li ul li a {
+    font-size: 12px;
+  }
+  #home {
+    padding: 50px;
+  }
   #home .heading h1{
     font-size: 55px;
     line-height: 48px;
@@ -1255,6 +1276,16 @@ ol li{
   #home .heading p{
     font-size: 20px;
     line-height: 22px;
+  }
+  .getUpdates {
+    width: 53%;
+    margin-top: 12%;
+  }
+  .getUpdates form .thirdRow select {
+    font-size: 12px;
+  }
+  .getUpdates form .thirdRow button {
+    font-weight: 500;
   }
   .prodcuctsVariety{
     padding: 20px 50px;
